@@ -47,7 +47,7 @@ module T::Types
           true
         end
       when Hash
-        type_ = self.type
+        type_ = type
         return false unless type_.is_a?(FixedArray)
         key_type, value_type = type_.types
         return false if key_type.nil? || value_type.nil? || type_.types.size > 2
